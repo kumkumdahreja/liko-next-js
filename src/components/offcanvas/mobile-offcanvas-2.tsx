@@ -12,7 +12,10 @@ type IProps = {
   setOpenOffcanvas: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IProps) {
+export default function MobileOffcanvasTwo({
+  openOffcanvas,
+  setOpenOffcanvas,
+}: IProps) {
   return (
     <div
       className={`tp-offcanvas-2-area p-relative ${
@@ -72,7 +75,7 @@ export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IPro
           <div className="tp-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100">
             <div className="tpoffcanvas__right-info">
               <div className="tpoffcanvas__tel">
-                <Link href="tel:+91-7300764266">+91-7300764266</Link>
+                <Link href="tel:+91-9311032704">+91-9311032704</Link>
               </div>
               <div className="tpoffcanvas__mail">
                 <Link href="mailto:contact@thebrandingstudio.in">
@@ -86,16 +89,19 @@ export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IPro
             <div className="tpoffcanvas__social-link">
               <ul>
                 <li>
-                  <Link href="#">Dribbble</Link>
+                  <Link href="https://www.facebook.com/share/1QZkMM9KJo/?mibextid=wwXIfr">
+                    Facebook
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Instagram</Link>
+                  <Link href="https://www.instagram.com/thebrandingstudio.in?igsh=MTFnbXVicWNwbmYwaA==">
+                    Instagram
+                  </Link>
                 </li>
                 <li>
-                  <Link href="#">Linkedin</Link>
-                </li>
-                <li>
-                  <Link href="#">Behance</Link>
+                  <Link href="https://www.linkedin.com/company/the-branding-studio-t-b-s/">
+                    Linkedin
+                  </Link>
                 </li>
               </ul>
             </div>

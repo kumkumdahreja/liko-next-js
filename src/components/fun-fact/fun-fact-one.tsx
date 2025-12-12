@@ -12,21 +12,21 @@ const counter_data = [
   {
     id: 2,
     title: "YEARS OF EXPERIENCE",
-    count: 17,
+    count: 2,
     text: "+",
   },
-  {
-    id: 3,
-    title: "TEAM MEMBERS",
-    count: 9,
-    text: "+",
-  },
-  {
-    id: 4,
-    title: "GROWING AGENCY",
-    count: 194,
-    text: "%",
-  },
+  // {
+  //   id: 3,
+  //   title: "TEAM MEMBERS",
+  //   count: 9,
+  //   text: "+",
+  // },
+  // {
+  //   id: 4,
+  //   title: "GROWING AGENCY",
+  //   count: 194,
+  //   text: "%",
+  // },
 ];
 export default function FunFactOne() {
   return (

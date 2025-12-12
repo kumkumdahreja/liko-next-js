@@ -52,7 +52,9 @@ const BrandMain = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="tm-hero-content">
-                        <span className="tm-hero-subtitle">Liko Studio</span>
+                        <span className="tm-hero-subtitle">
+                          The Branding Studio
+                        </span>
                         <h4 className="tm-hero-title tp-char-animation">
                           Our Sponsors
                         </h4>
@@ -70,11 +72,11 @@ const BrandMain = () => {
               {/* brand hero */}
 
               {/* brand area */}
-              <BrandMainArea/>
+              <BrandMainArea />
               {/* brand area */}
 
               {/* big text */}
-              <BigText/>
+              <BigText />
               {/* big text */}
             </main>
 

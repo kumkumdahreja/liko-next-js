@@ -1,10 +1,9 @@
-
-import React from 'react';
-import Image from 'next/image';
-import LineTextThree from '@/components/line-text/line-text-3';
-import logo from '@/assets/img/logo/logo-white.png';
-import { RightArrow } from '@/components/svg';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import LineTextThree from "@/components/line-text/line-text-3";
+import logo from "@/assets/img/logo/logo-white.png";
+import { RightArrow } from "@/components/svg";
+import Link from "next/link";
 
 export default function FooterThree() {
   return (
@@ -111,7 +110,7 @@ export default function FooterThree() {
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
-                    <Link href="tel:+91-7300764266">P: +91-7300764266</Link>
+                    <Link href="tel:+91-9311032704">P: +91-9311032704</Link>
                   </span>
                 </div>
                 <div className="tp-footer-2-contact-item">
@@ -151,20 +150,27 @@ export default function FooterThree() {
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-5">
               <div className="tp-copyright-2-left text-center text-lg-start">
-                <p>
-                  All rights reserved — {new Date().getFullYear()} © Themepure
-                </p>
+                <p>All rights reserved — 2024 © The Branding Studio</p>
               </div>
             </div>
             <div className="col-xl-8 col-lg-7">
               <div className="tp-copyright-2-social text-center text-lg-end">
-                <Link className="mb-10" href="#">
+                <Link
+                  className="mb-10"
+                  href="https://www.linkedin.com/company/the-branding-studio-t-b-s/"
+                >
                   Linkedin
                 </Link>
-                <Link className="mb-10" href="#">
-                  Twitter
+                <Link
+                  className="mb-10"
+                  href="https://www.facebook.com/share/1QZkMM9KJo/?mibextid=wwXIfr"
+                >
+                  Facebook
                 </Link>
-                <Link className="mb-10" href="#">
+                <Link
+                  className="mb-10"
+                  href="https://www.instagram.com/thebrandingstudio.in?igsh=MTFnbXVicWNwbmYwaA=="
+                >
                   Instagram
                 </Link>
               </div>

@@ -13,7 +13,7 @@ import ProjectFour from "@/components/project/project-four";
 import BigText from "@/components/big-text";
 import FooterTwo from "@/layouts/footers/footer-two";
 // animation
-import { charAnimation,titleAnimation } from "@/utils/title-animation";
+import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import { projectThreeAnimation } from "@/utils/project-anim";
 
 const PortfolioWrapperMain = () => {
@@ -43,7 +43,9 @@ const PortfolioWrapperMain = () => {
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="tm-hero-content">
-                      <span className="tm-hero-subtitle">Liko Studio</span>
+                      <span className="tm-hero-subtitle">
+                        The Branding Studio
+                      </span>
                       <h4 className="tm-hero-title tp-char-animation">
                         Our latest & great projects
                       </h4>
@@ -62,7 +64,7 @@ const PortfolioWrapperMain = () => {
             {/* portfolio hero */}
 
             {/* portfolio area */}
-            <ProjectFour style_2={true}/>
+            <ProjectFour style_2={true} />
             {/* portfolio area */}
 
             {/* big text */}

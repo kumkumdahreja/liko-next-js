@@ -9,20 +9,20 @@ import s_3 from "@/assets/img/home-01/service/service-icon-3.png";
 const service_data = [
   {
     id: 1,
-    title: "Branding",
-    desc: "Branding is one of the most important ingredients for the success of any business.",
+    title: "Content Creation",
+    desc: "Craft compelling visual stories with professional videography and high-impact photography, turning your brand's vision into captivating reality.",
     icon: s_2,
   },
   {
     id: 2,
-    title: "Website design",
-    desc: "The perfect cocktail should still look and taste perfect no matter the size of the glass you serve it in.",
+    title: "Web Development",
+    desc: "We engineer high-performance, seamless digital platforms and e-commerce solutions that form the powerful foundation of your online business.",
     icon: s_1,
   },
   {
     id: 3,
-    title: "Marketing",
-    desc: "We take that same approach with the apps & websites we create. you go there because of the overall experience.",
+    title: "Digital Marketing",
+    desc: "Execute precision-targeted strategies, including Meta Ads and advanced SEO, to drive qualified traffic and maximize your measurable return on investment.",
     icon: s_3,
   },
 ];

@@ -3,7 +3,12 @@ import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText, cursorAnimation } from "@/plugins";
+import {
+  ScrollSmoother,
+  ScrollTrigger,
+  SplitText,
+  cursorAnimation,
+} from "@/plugins";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
@@ -14,7 +19,12 @@ import BigText from "@/components/big-text";
 import FooterTwo from "@/layouts/footers/footer-two";
 // animation
 import { hoverBtn } from "@/utils/hover-btn";
-import {charAnimation,fadeAnimation,titleAnimation,zoomAnimation} from "@/utils/title-animation";
+import {
+  charAnimation,
+  fadeAnimation,
+  titleAnimation,
+  zoomAnimation,
+} from "@/utils/title-animation";
 
 const PortfolioGridColThreeFullwidthMain = () => {
   useScrollSmooth();
@@ -23,14 +33,17 @@ const PortfolioGridColThreeFullwidthMain = () => {
     document.body.classList.add("tp-magic-cursor");
     return () => {
       document.body.classList.remove("tp-magic-cursor");
-    }
+    };
   }, []);
 
   useEffect(() => {
-    if(typeof window !== 'undefined' && document.querySelector('.tp-magic-cursor')) {
+    if (
+      typeof window !== "undefined" &&
+      document.querySelector(".tp-magic-cursor")
+    ) {
       cursorAnimation();
     }
-  },[]);
+  }, []);
 
   useGSAP(() => {
     const timer = setTimeout(() => {
@@ -45,13 +58,12 @@ const PortfolioGridColThreeFullwidthMain = () => {
 
   return (
     <Wrapper>
-
       {/* magic cursor start */}
       <div id="magic-cursor">
         <div id="ball"></div>
       </div>
       {/* magic cursor end */}
-      
+
       {/* header area start */}
       <HeaderEleven />
       {/* header area end */}
@@ -65,7 +77,9 @@ const PortfolioGridColThreeFullwidthMain = () => {
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="tm-hero-content">
-                      <span className="tm-hero-subtitle">Liko Studio</span>
+                      <span className="tm-hero-subtitle">
+                        The Branding Studio
+                      </span>
                       <h4 className="tm-hero-title fs-220 tp-char-animation">
                         Classic Grid
                       </h4>

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
+import { Facebook, CloseTwo, Linkdin, InstagramTwo, Youtube } from "../svg";
 
 // images
 import logo from "@/assets/img/logo/logo.png";
@@ -19,7 +19,10 @@ type IProps = {
   setOpenOffcanvas: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IProps) {
+export default function MobileOffcanvas({
+  openOffcanvas,
+  setOpenOffcanvas,
+}: IProps) {
   return (
     <>
       <div className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}>
@@ -42,7 +45,6 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
               <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
             </div>
             <div className="tp-main-menu-mobile d-xl-none">
               <MobileMenus />
@@ -69,7 +71,7 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
 
               <ul>
                 <li>
-                  <Link href="tel:+91-7300764266">+91-7300764266</Link>
+                  <Link href="tel:+91-9311032704">+91-9311032704</Link>
                 </li>
                 <li>
                   <Link href="mailto:contact@thebrandingstudio.in">
@@ -88,24 +90,19 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
               <h3 className="tp-offcanvas-title sm">Follow Us</h3>
               <ul>
                 <li>
-                  <Link href="#">
+                  <Link href="https://www.instagram.com/thebrandingstudio.in?igsh=MTFnbXVicWNwbmYwaA==">
                     <InstagramTwo />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <Dribble />
+                  <Link href="https://www.linkedin.com/company/the-branding-studio-t-b-s/">
+                    <Linkdin />
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
+                  <Link href="https://www.facebook.com/share/1QZkMM9KJo/?mibextid=wwXIfr">
                     {" "}
-                    <Behance />
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#">
-                    <Youtube />
+                    <Facebook />
                   </Link>
                 </li>
               </ul>

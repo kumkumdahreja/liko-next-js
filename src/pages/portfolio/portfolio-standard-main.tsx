@@ -3,7 +3,12 @@ import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import { ScrollSmoother, ScrollTrigger, SplitText, cursorAnimation } from "@/plugins";
+import {
+  ScrollSmoother,
+  ScrollTrigger,
+  SplitText,
+  cursorAnimation,
+} from "@/plugins";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
@@ -24,14 +29,17 @@ const PortfolioStandardMain = () => {
     document.body.classList.add("tp-magic-cursor");
     return () => {
       document.body.classList.remove("tp-magic-cursor");
-    }
+    };
   }, []);
 
   useEffect(() => {
-    if(typeof window !== 'undefined' && document.querySelector('.tp-magic-cursor')) {
+    if (
+      typeof window !== "undefined" &&
+      document.querySelector(".tp-magic-cursor")
+    ) {
       cursorAnimation();
     }
-  },[]);
+  }, []);
 
   useGSAP(() => {
     const timer = setTimeout(() => {
@@ -45,13 +53,12 @@ const PortfolioStandardMain = () => {
 
   return (
     <Wrapper>
-
       {/* magic cursor start */}
       <div id="magic-cursor">
         <div id="ball"></div>
       </div>
       {/* magic cursor end */}
-      
+
       {/* header area start */}
       <HeaderEleven />
       {/* header area end */}
@@ -65,7 +72,9 @@ const PortfolioStandardMain = () => {
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="tm-hero-content">
-                      <span className="tm-hero-subtitle">Liko Studio</span>
+                      <span className="tm-hero-subtitle">
+                        The Branding Studio
+                      </span>
                       <h4 className="tm-hero-title tp-char-animation">
                         Our latest & great projects
                       </h4>
@@ -88,7 +97,7 @@ const PortfolioStandardMain = () => {
             {/* portfolio area */}
 
             {/* big text */}
-            <BigText/>
+            <BigText />
             {/* big text */}
           </main>
 

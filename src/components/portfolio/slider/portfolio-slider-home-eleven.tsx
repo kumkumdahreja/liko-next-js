@@ -17,23 +17,23 @@ import showcase_4 from "@/assets/img/inner-project/showcase/showcase-4.jpg";
 const slider_data = [
   {
     id: 1,
-    subtitle: "[ UI, Web Design ]",
-    title: "Top <br/> Paddock",
+    subtitle: "[ Design.Build.Grow ]",
+    title: "Website <br/> Development",
   },
   {
     id: 2,
-    subtitle: "[ UI, Web Design ]",
-    title: "Band <br/> Some",
+    subtitle: "[ Write.Rank.Authority ]",
+    title: "Content <br/> Creation",
   },
   {
     id: 3,
-    subtitle: "[ UI, Web Design ]",
-    title: "Lune <br/> Lab",
+    subtitle: "[ Target.Convert.ROI ]",
+    title: "Meta <br/> Ads",
   },
   {
     id: 4,
-    subtitle: "[ UI, Web Design ]",
-    title: "Park 108 <br/> Nyc",
+    subtitle: "[ Plan.Execute.Measure ]",
+    title: "Digital <br/> Marketing",
   },
 ];
 
@@ -105,15 +105,15 @@ export default function PortfolioSliderHomeEleven() {
               touchStartPreventDefault={false}
               speed={1000}
               effect="fade"
-              loop={true}                 
+              loop={true}
               mousewheel={true}
               simulateTouch={true}
               navigation={{
-                nextEl: '.swiper-next',
-                prevEl: '.swiper-prev',
+                nextEl: ".swiper-next",
+                prevEl: ".swiper-prev",
               }}
               pagination={{
-                el: '.tp-slider-dot',
+                el: ".tp-slider-dot",
                 clickable: true,
               }}
               modules={[Navigation, Pagination, Autoplay, Mousewheel]}
@@ -121,9 +121,12 @@ export default function PortfolioSliderHomeEleven() {
               onSlideNextTransitionStart={slideNextTransitionStart}
               id="trigger-slides"
             >
-              {slider_data.map((item,i) => (
+              {slider_data.map((item, i) => (
                 <SwiperSlide key={item.id}>
-                  <div className={`slide-wrap ${i === 0 ? 'active' : ''}`} data-slide={i}></div>
+                  <div
+                    className={`slide-wrap ${i === 0 ? "active" : ""}`}
+                    data-slide={i}
+                  ></div>
                   <div className="container">
                     <div className="row">
                       <div className="col-xl-8">
@@ -156,9 +159,24 @@ export default function PortfolioSliderHomeEleven() {
             </div>
             <div className="tp-slider-dot d-none d-md-block"></div>
             <div className="port-showcase-slider-social tp-hover-btn-wrapper d-none d-md-block">
-              <Link className="tp-hover-btn-item" href="#">Fb</Link>
-              <Link className="tp-hover-btn-item" href="#">In</Link>
-              <Link className="tp-hover-btn-item" href="#">Be</Link>
+              <Link
+                className="tp-hover-btn-item"
+                href="https://www.facebook.com/share/1QZkMM9KJo/?mibextid=wwXIfr"
+              >
+                Fb
+              </Link>
+              <Link
+                className="tp-hover-btn-item"
+                href="https://www.instagram.com/thebrandingstudio.in?igsh=MTFnbXVicWNwbmYwaA=="
+              >
+                In
+              </Link>
+              <Link
+                className="tp-hover-btn-item"
+                href="https://www.linkedin.com/company/the-branding-studio-t-b-s/"
+              >
+                Ln
+              </Link>
             </div>
           </div>
         </div>
@@ -167,14 +185,14 @@ export default function PortfolioSliderHomeEleven() {
       {/*  canvas slider */}
       <div id="canvas-slider" className="canvas-slider" ref={webGLContainerRef}>
         {slider_images.map((imgSrc, index) => (
-        <div key={index} className="slider-img" data-slide={index}>
-          <Image
-            className="slide-img"
-            src={imgSrc}
-            alt="showcase-img"
-            style={{ height: "auto" }}
-          />
-        </div>
+          <div key={index} className="slider-img" data-slide={index}>
+            <Image
+              className="slide-img"
+              src={imgSrc}
+              alt="showcase-img"
+              style={{ height: "auto" }}
+            />
+          </div>
         ))}
       </div>
       {/* canvas slider  */}

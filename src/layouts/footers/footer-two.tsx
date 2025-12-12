@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/img/logo/logo-white.png";
 import logo_2 from "@/assets/img/logo/logo.png";
-import { RightArrow } from "@/components/svg";
+// import { RightArrow } from "@/components/svg";
 
 // prop type
 type IProps = {
@@ -11,7 +11,10 @@ type IProps = {
   topCls?: string;
 };
 
-export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: IProps) {
+export default function FooterTwo({
+  whiteFooter = false,
+  topCls = "footer-top",
+}: IProps) {
   return (
     <footer className={`${topCls}`}>
       <div
@@ -42,7 +45,8 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                 )}
                 <div className="tp-footer-2-widget-text">
                   <p>
-                    Drop us a line sed id semper <br /> risus in hend rerit.
+                    Ready to grow? Drop us a line to schedule your personalized
+                    strategy session today.
                   </p>
                 </div>
               </div>
@@ -97,7 +101,7 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                 </div>
                 <div className="tp-footer-2-contact-item">
                   <span>
-                    <Link href="tel:+91-7300764266">P: +91-7300764266</Link>
+                    <Link href="tel:+91-9311032704">P: +91-9311032704</Link>
                   </span>
                 </div>
                 <div className="tp-footer-2-contact-item">
@@ -109,7 +113,7 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-5 col-md-6 mb-50">
+            {/* <div className="col-xl-4 col-lg-5 col-md-6 mb-50">
               <div className="tp-footer-2-widget footer-col-2-4">
                 <div className="tp-footer-2-widget-newslatter">
                   <h4 className="tp-footer-2-widget-title">
@@ -127,7 +131,7 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
                   </form>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -141,20 +145,27 @@ export default function FooterTwo({ whiteFooter = false,topCls='footer-top' }: I
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-5">
               <div className="tp-copyright-2-left text-center text-lg-start">
-                <p>
-                  All rights reserved — {new Date().getFullYear()} © Themepure
-                </p>
+                <p>All rights reserved — 2024 © The Branding Studio</p>
               </div>
             </div>
             <div className="col-xl-8 col-lg-7">
               <div className="tp-copyright-2-social text-center text-lg-end">
-                <Link className="mb-10" href="#">
+                <Link
+                  className="mb-10"
+                  href="https://www.linkedin.com/company/the-branding-studio-t-b-s/"
+                >
                   Linkedin
                 </Link>
-                <Link className="mb-10" href="#">
-                  Twitter
+                <Link
+                  className="mb-10"
+                  href="https://www.facebook.com/share/1QZkMM9KJo/?mibextid=wwXIfr"
+                >
+                  Facebook
                 </Link>
-                <Link className="mb-10" href="#">
+                <Link
+                  className="mb-10"
+                  href="https://www.instagram.com/thebrandingstudio.in?igsh=MTFnbXVicWNwbmYwaA=="
+                >
                   Instagram
                 </Link>
               </div>

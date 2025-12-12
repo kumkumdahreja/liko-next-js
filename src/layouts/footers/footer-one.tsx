@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from '@/assets/img/logo/logo-white.png';
+import logo from "@/assets/img/logo/logo-white.png";
 import { footerOneAnimation, footerTwoAnimation } from "@/utils/footer-anim";
 
 const footer_links = [
@@ -16,7 +16,7 @@ export default function FooterOne() {
   const [isActive, setIsActive] = React.useState(false);
   useEffect(() => {
     footerOneAnimation();
-  },[])
+  }, []);
   return (
     <footer>
       {/* footer area start */}
@@ -79,16 +79,19 @@ export default function FooterOne() {
                         </h4>
                         <ul className="tp-footer-widget-social">
                           <li className="tp_fade_bottom">
-                            <Link href="#">Facebook</Link>
+                            <Link href="https://www.facebook.com/share/1QZkMM9KJo/?mibextid=wwXIfr">
+                              Facebook
+                            </Link>
                           </li>
                           <li className="tp_fade_bottom">
-                            <Link href="#">Instagram</Link>
+                            <Link href="https://www.instagram.com/thebrandingstudio.in?igsh=MTFnbXVicWNwbmYwaA==">
+                              Instagram
+                            </Link>
                           </li>
                           <li className="tp_fade_bottom">
-                            <Link href="#">Behance</Link>
-                          </li>
-                          <li className="tp_fade_bottom">
-                            <Link href="#">Dribbble</Link>
+                            <Link href="https://www.linkedin.com/company/the-branding-studio-t-b-s/">
+                              Linkedin
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -114,10 +117,7 @@ export default function FooterOne() {
               </div>
               <div className="col-xl-6 col-md-8">
                 <div className="tp-copyright-text text-center text-md-end">
-                  <p>
-                    Copyright © {new Date().getFullYear()} Themepure. All rights
-                    reserved.
-                  </p>
+                  <p>All rights reserved — 2024 © The Branding Studio</p>
                 </div>
               </div>
             </div>

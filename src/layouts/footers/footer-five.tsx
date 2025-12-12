@@ -19,7 +19,10 @@ export default function FooterFive() {
                   </h4>
                 </div>
                 <div className="tp-footer-5-info d-flex align-items-center justify-content-start justify-content-md-end">
-                  <Link className="tp-footer-5-mail" href="mailto:contact@thebrandingstudio.in">
+                  <Link
+                    className="tp-footer-5-mail"
+                    href="mailto:contact@thebrandingstudio.in"
+                  >
                     contact@thebrandingstudio.in
                   </Link>
                   <Link className="tp-footer-5-link" href="#">
@@ -44,31 +47,41 @@ export default function FooterFive() {
                     href="https://www.google.com/maps/@40.1001598,-74.0544407,8.83z?entry=ttu"
                     target="_blank"
                   >
-                    Office No. LG007, H-36, Green Leafers Business Park, Sector-63, Noida
+                    Office No. LG007, H-36, Green Leafers Business Park,
+                    Sector-63, Noida
                   </Link>
                 </span>
                 <span>
                   Phone:
-                  <Link href="tel:+725214456">+91-7300764266</Link>
+                  <Link href="tel:+725214456">+91-9311032704</Link>
                 </span>
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-7">
               <div className="tp-copyright-2-social text-start text-sm-center text-xl-center">
-                <Link className="mb-10" href="#">
+                <Link
+                  className="mb-10"
+                  href="https://www.linkedin.com/company/the-branding-studio-t-b-s/"
+                >
                   Linkedin
                 </Link>
-                <Link className="mb-10" href="#">
-                  Twitter
+                <Link
+                  className="mb-10"
+                  href="https://www.facebook.com/share/1QZkMM9KJo/?mibextid=wwXIfr"
+                >
+                  Facebook
                 </Link>
-                <Link className="mb-10" href="#">
+                <Link
+                  className="mb-10"
+                  href="https://www.instagram.com/thebrandingstudio.in?igsh=MTFnbXVicWNwbmYwaA=="
+                >
                   Instagram
                 </Link>
               </div>
             </div>
             <div className="col-xl-3 col-lg-6 col-md-5">
               <div className="tp-copyright-2-left text-center text-md-end">
-                <p>©{new Date().getFullYear()}- All Rights Reserved</p>
+                <p>All rights reserved — 2024 © The Branding Studio</p>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ import TeamArea from "@/components/team/team-area";
 import StudioPanelFour from "@/components/studio-panels/studio-panel-4";
 import FooterTwo from "@/layouts/footers/footer-two";
 // animation
-import {charAnimation,titleAnimation} from "@/utils/title-animation";
+import { charAnimation, titleAnimation } from "@/utils/title-animation";
 import { hoverBtn } from "@/utils/hover-btn";
 
 const TeamMain = () => {
@@ -43,7 +43,9 @@ const TeamMain = () => {
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="tm-hero-content">
-                      <span className="tm-hero-subtitle">Liko Studio</span>
+                      <span className="tm-hero-subtitle">
+                        The Branding Studio
+                      </span>
                       <h4 className="tm-hero-title tp-char-animation">
                         Talented team
                       </h4>
@@ -62,11 +64,11 @@ const TeamMain = () => {
             {/* team hero */}
 
             {/* team area */}
-            <TeamArea/>
+            <TeamArea />
             {/* team area */}
 
             {/* testimonial area */}
-            <StudioPanelFour style_2={true}/>
+            <StudioPanelFour style_2={true} />
             {/* testimonial area */}
           </main>
 

@@ -23,7 +23,7 @@ export default function FooterSix() {
                   <div className="tp-footer-6-talk">
                     <span>Got Questions? Call us</span>
                     <h4>
-                      <Link href="tel:+91-7300764266">+91-7300764266</Link>
+                      <Link href="tel:+91-9311032704">+91-9311032704</Link>
                     </h4>
                   </div>
                   <div className="tp-footer-6-contact">
@@ -148,7 +148,7 @@ export default function FooterSix() {
               <div className="col-xl-4 col-lg-5 col-md-6">
                 <div className="tp-copyright-2-left text-center text-md-start">
                   <p className="mb-0">
-                    All rights reserved — {new Date().getFullYear()} © Themepure
+                    All rights reserved — 2024 © The Branding Studio
                   </p>
                 </div>
               </div>

@@ -18,9 +18,7 @@ import PortfolioGridFourColArea from "@/components/portfolio/portfolio-grid-4-co
 import BigText from "@/components/big-text";
 import FooterTwo from "@/layouts/footers/footer-two";
 import ProjectFour from "@/components/project/project-four";
-import HeaderEight from "@/layouts/headers/header-eight";
 import PortfolioSliderHomeNine from "@/components/portfolio/slider/portfolio-slider-home-nine";
-import ThemeSetting from "@/components/theme-setting";
 // animation
 import { hoverBtn } from "@/utils/hover-btn";
 import {
@@ -37,10 +35,8 @@ const PortfolioGridColFourFullwidthMain = () => {
 
   useEffect(() => {
     document.body.classList.add("tp-magic-cursor");
-    document.body.classList.add("tp-smooth-scroll");
     return () => {
       document.body.classList.remove("tp-magic-cursor");
-      document.body.classList.remove("tp-smooth-scroll");
     };
   }, []);
 
@@ -138,17 +134,21 @@ const PortfolioGridColFourFullwidthMain = () => {
             <ProjectFour style_2={true} />
             {/* End Wrapper Section */}
 
-            {/* Home 9 Section */}
-            <div
-              className={`tp-porfolio-10-main ${
-                whiteCls ? "header-white" : ""
-              }`}
-            >
-              <PortfolioSliderHomeNine setWhiteCls={setWhiteCls} />
-            </div>
+            {/* Home 9 Section - Full width slider */}
+            <section className="tp-portfolio-slider-section">
+              <div
+                className={`tp-porfolio-10-main ${
+                  whiteCls ? "header-white" : ""
+                }`}
+              >
+                <div id="smooth-wrapper">
+                  <div id="smooth-content">
+                    <PortfolioSliderHomeNine setWhiteCls={setWhiteCls} />
+                  </div>
+                </div>
+              </div>
+            </section>
             {/* End Home 9 Section */}
-
-            <br />
 
             {/* big text */}
             <BigText />

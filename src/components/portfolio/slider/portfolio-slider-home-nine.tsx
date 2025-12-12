@@ -1,167 +1,132 @@
-"use client";
-import { gsap } from "gsap";
-import React, { useEffect } from "react";
-import { useGSAP } from "@gsap/react";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import {
-  ScrollSmoother,
-  ScrollTrigger,
-  SplitText,
-  cursorAnimation,
-} from "@/plugins";
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+import React from "react";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+// images
+import port_1 from "@/assets/img/home-10/porfolio/port-1.jpg";
+import port_2 from "@/assets/img/home-10/porfolio/port-2.jpg";
+import port_3 from "@/assets/img/home-10/porfolio/port-3.jpg";
+import port_4 from "@/assets/img/home-10/porfolio/port-4.jpg";
+import port_5 from "@/assets/img/home-10/porfolio/port-5.jpg";
+import port_6 from "@/assets/img/home-10/porfolio/port-6.jpg";
+import port_7 from "@/assets/img/home-10/porfolio/port-7.jpg";
 
-// internal imports
-import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
-import PortfolioGridFourColArea from "@/components/portfolio/portfolio-grid-4-col-area";
-import BigText from "@/components/big-text";
-import FooterTwo from "@/layouts/footers/footer-two";
-import ProjectFour from "@/components/project/project-four";
-import PortfolioSliderHomeNine from "@/components/portfolio/slider/portfolio-slider-home-nine";
-// animation
-import { hoverBtn } from "@/utils/hover-btn";
-import {
-  charAnimation,
-  fadeAnimation,
-  titleAnimation,
-} from "@/utils/title-animation";
-import { imageRevealAnimation } from "@/utils/image-reveal-anim";
-import { projectThreeAnimation } from "@/utils/project-anim";
+// portfolio titles
+const portfolio_titles = [
+  {
+    id: 1,
+    title: "Silkvision",
+    category: "Visual",
+  },
+  {
+    id: 2,
+    title: "Disefio Gräfico",
+    category: "Creative",
+  },
+  {
+    id: 3,
+    title: "PSD Mockup",
+    category: "Branding",
+  },
+  {
+    id: 4,
+    title: "Fastwire",
+    category: "Branding",
+  },
+  {
+    id: 5,
+    title: "Tesla",
+    category: "Mobile Application",
+  },
+  {
+    id: 6,
+    title: "Ecommerce",
+    category: "Digital Design",
+  },
+  {
+    id: 7,
+    title: "Cosmetic",
+    category: "Visual",
+  },
+  {
+    id: 8,
+    title: "Waves",
+    category: "UI Design",
+  },
+];
 
-const PortfolioGridColFourFullwidthMain = () => {
-  const [whiteCls, setWhiteCls] = React.useState(true);
-  useScrollSmooth();
-
-  useEffect(() => {
-    document.body.classList.add("tp-magic-cursor");
-    return () => {
-      document.body.classList.remove("tp-magic-cursor");
-    };
-  }, []);
-
-  useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      document.querySelector(".tp-magic-cursor")
-    ) {
-      cursorAnimation();
-    }
-  }, []);
-
-  useGSAP(() => {
-    const timer = setTimeout(() => {
-      charAnimation();
-      titleAnimation();
-      hoverBtn();
-      imageRevealAnimation();
-      fadeAnimation();
-      projectThreeAnimation();
-    }, 100);
-    return () => clearTimeout(timer);
-  });
-
+// bg img
+function BgImg({ imgSrc, id }: { imgSrc: StaticImageData; id: string }) {
   return (
-    <Wrapper>
-      {/* magic cursor start */}
-      <div id="magic-cursor">
-        <div id="ball"></div>
-      </div>
-      {/* magic cursor end */}
+    <Image
+      src={imgSrc}
+      alt="bg-img"
+      className={`tp-porfolio-10-bg-${id}`}
+      style={{ height: "auto" }}
+    />
+  );
+}
 
-      {/* header area start */}
-      <HeaderEleven />
-      {/* header area end */}
-
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <main>
-            {/* portfolio hero */}
-            <div className="tm-hero-area tm-hero-ptb">
-              <div className="container">
-                <div className="row">
-                  <div className="col-xl-12">
-                    <div className="tm-hero-content">
-                      <span className="tm-hero-subtitle">
-                        The Branding Studio
-                      </span>
-                      <h4 className="tm-hero-title fs-220 tp-char-animation">
-                        Classic Grid
-                      </h4>
-                    </div>
-                    <div className="tm-hero-text tp_title_anim">
-                      <p>
-                        We're a diverse team that works as fancies attention to
-                        details, enjoys beers on Friday nights and aspires to
-                        design the dent in the universe.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* portfolio hero */}
-
-            {/* portfolio area */}
-            <PortfolioGridFourColArea style_2={true} />
-            {/* portfolio area */}
-
-            {/* Wrapper Section */}
-            <div className="tm-hero-area tm-hero-ptb">
-              <div className="container">
-                <div className="row">
-                  <div className="col-xl-12">
-                    <div className="tm-hero-content">
-                      <span className="tm-hero-subtitle">
-                        The Branding Studio
-                      </span>
-                      <h4 className="tm-hero-title tp-char-animation">
-                        Our latest & great projects
-                      </h4>
-                    </div>
-                    <div className="tm-hero-text">
-                      <p className="tp_title_anim">
-                        We're a diverse team that works as fancies attention to
-                        details, enjoys beers on Friday nights and aspires to
-                        design the dent in the universe.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <ProjectFour style_2={true} />
-            {/* End Wrapper Section */}
-
-            {/* Home 9 Section - Full width slider */}
-            <section className="tp-portfolio-slider-section">
-              <div
-                className={`tp-porfolio-10-main ${
-                  whiteCls ? "header-white" : ""
-                }`}
-              >
-                <div id="smooth-wrapper">
-                  <div id="smooth-content">
-                    <PortfolioSliderHomeNine setWhiteCls={setWhiteCls} />
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* End Home 9 Section */}
-
-            {/* big text */}
-            <BigText />
-            {/* big text */}
-          </main>
-
-          {/* footer area */}
-          <FooterTwo topCls="" />
-          {/* footer area */}
+// prop type
+type IProps = {
+  setWhiteCls: React.Dispatch<React.SetStateAction<boolean>>;
+};
+export default function PortfolioSliderHomeNine({ setWhiteCls }: IProps) {
+  const [activeBg, setActiveBg] = React.useState<string | null>('tp-porfolio-10-bg-4');
+  function handleActiveBg(id: number) {
+    setActiveBg(`tp-porfolio-10-bg-${id}`);
+    setWhiteCls(true);
+  }
+  function handleDeactiveBg() {
+    setActiveBg('tp-porfolio-10-bg-4');
+    setWhiteCls(true);
+  }
+  return (
+    <div className="tp-porfolio-10-area tp-porfolio-10-height p-relative">
+      <div className="tp-porfolio-10-bg-wrap">
+        <div id="tp-porfolio-10-bg-box" className={activeBg ? activeBg : ""}>
+          <BgImg imgSrc={port_1} id="1" />
+          <BgImg imgSrc={port_2} id="2" />
+          <BgImg imgSrc={port_3} id="3" />
+          <BgImg imgSrc={port_4} id="4" />
+          <BgImg imgSrc={port_5} id="5" />
+          <BgImg imgSrc={port_6} id="6" />
+          <BgImg imgSrc={port_7} id="7" />
+          <BgImg imgSrc={port_5} id="8" />
         </div>
       </div>
-    </Wrapper>
+      <div className="container container-1380">
+        <div className="row">
+          <div className="col-xl-12">
+            <div className="tp-porfolio-10-title-wrap z-index-5">
+              <ul>
+                {portfolio_titles.map((item) => (
+                  <li
+                    key={item.id}
+                    onMouseEnter={() => handleActiveBg(item.id)}
+                    onMouseLeave={() => handleDeactiveBg()}
+                    className={
+                      activeBg === `tp-porfolio-10-bg-${item.id}` ||
+                      activeBg === null
+                        ? "active"
+                        : ""
+                    }
+                    rel={`tp-porfolio-10-bg-${item.id}`}
+                  >
+                    <Link href="/portfolio-details-3">
+                      <div className="tp-porfolio-10-title-box d-flex align-items-end">
+                        <h2 className="tp-porfolio-10-title">{item.title}</h2>
+                        <span className="tp-porfolio-10-category">
+                          / {item.category}
+                        </span>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
-
-export default PortfolioGridColFourFullwidthMain;
+}

@@ -18,7 +18,7 @@ import PortfolioGridFourColArea from "@/components/portfolio/portfolio-grid-4-co
 import BigText from "@/components/big-text";
 import FooterTwo from "@/layouts/footers/footer-two";
 import ProjectFour from "@/components/project/project-four";
-import PortfolioSliderHomeNine from "@/components/portfolio/slider/portfolio-slider-home-nine";
+import ThemeSetting from "@/components/theme-setting";
 // animation
 import { hoverBtn } from "@/utils/hover-btn";
 import {
@@ -31,12 +31,15 @@ import { projectThreeAnimation } from "@/utils/project-anim";
 
 const PortfolioGridColFourFullwidthMain = () => {
   const [whiteCls, setWhiteCls] = React.useState(true);
+
   useScrollSmooth();
 
   useEffect(() => {
     document.body.classList.add("tp-magic-cursor");
+    document.body.classList.add("tp-smooth-scroll");
     return () => {
       document.body.classList.remove("tp-magic-cursor");
+      document.body.classList.remove("tp-smooth-scroll");
     };
   }, []);
 
@@ -69,7 +72,10 @@ const PortfolioGridColFourFullwidthMain = () => {
       </div>
       {/* magic cursor end */}
 
-      {/* header area start */}
+      {/* Theme Setting if needed */}
+      <ThemeSetting />
+
+      {/* header area start - Only HeaderEleven */}
       <HeaderEleven />
       {/* header area end */}
 
@@ -134,21 +140,6 @@ const PortfolioGridColFourFullwidthMain = () => {
             <ProjectFour style_2={true} />
             {/* End Wrapper Section */}
 
-            {/* Home 9 Section - Full width slider */}
-            <section className="tp-portfolio-slider-section">
-              <div
-                className={`tp-porfolio-10-main ${
-                  whiteCls ? "header-white" : ""
-                }`}
-              >
-                <div id="smooth-wrapper">
-                  <div id="smooth-content">
-                    <PortfolioSliderHomeNine setWhiteCls={setWhiteCls} />
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* End Home 9 Section */}
 
             {/* big text */}
             <BigText />
